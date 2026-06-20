@@ -1,0 +1,15 @@
+{
+  "hash": "a4ace2e7",
+  "configHash": "eff0945e",
+  "lockfileHash": "64de6fe1",
+  "browserHash": "73adf287",
+  "optimized": {
+    "@vercel/analytics": {
+      "src": "../../node_modules/@vercel/analytics/dist/index.mjs",
+      "file": "@vercel_analytics.js",
+      "fileHash": "bf26148b",
+      "needsInterop": false
+    }
+  },
+  "chunks": {}
+}

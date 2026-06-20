@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CYBERSPACE Documentation</title>
+    <style>
+        body {
+            font-family: 'SF Pro Text', -apple-system, BlinkMacSystemFont, Roboto, sans-serif;
+            background-color: #ffffff;
+            color: #333333;
+            margin: 0;
+            display: flex;
+            min-height: 100vh;
+        }
+        .sidebar {
+            width: 250px;
+            background-color: #f5f5f7;
+            padding: 30px 20px;
+            border-right: 1px solid #e5e5e5;
+        }
+        .sidebar h3 {
+            margin-top: 0;
+            color: #1d1d1f;
+        }
+        .sidebar ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+        .sidebar li {
+            margin-bottom: 12px;
+        }
+        .sidebar a {
+            color: #515154;
+            text-decoration: none;
+            font-size: 0.95em;
+        }
+        .sidebar a:hover, .sidebar a.active {
+            color: #0066cc;
+        }
+        .content {
+            flex: 1;
+            padding: 50px 80px;
+            max-width: 800px;
+        }
+        h1 {
+            font-size: 2.5em;
+            color: #1d1d1f;
+            margin-top: 0;
+        }
+        h2 {
+            border-bottom: 1px solid #e5e5e5;
+            padding-bottom: 10px;
+            margin-top: 40px;
+        }
+        code {
+            background-color: #f5f5f7;
+            padding: 2px 6px;
+            border-radius: 4px;
+            font-family: monospace;
+            color: #d12e61;
+        }
+        .code-block {
+            background-color: #1d1d1f;
+            color: #f5f5f7;
+            padding: 15px;
+            border-radius: 8px;
+            font-family: monospace;
+            overflow-x: auto;
+            margin: 20px 0;
+        }
+        .back-link {
+            display: inline-block;
+            margin-top: 30px;
+            padding: 8px 16px;
+            background: #e5e5e5;
+            color: #1d1d1f;
+            text-decoration: none;
+            border-radius: 20px;
+            font-size: 0.9em;
+        }
+    </style>
+</head>
+<body>
+    <div class="sidebar">
+        <h3>Documentation</h3>
+        <ul>
+            <li><a href="#" class="active">Introduction</a></li>
+            <li><a href="#">Getting Started</a></li>
+            <li><a href="#">Configuration</a></li>
+            <li><a href="#">Map Layers API</a></li>
+            <li><a href="#">Custom Panels</a></li>
+            <li><a href="#">Data Connectors</a></li>
+        </ul>
+    </div>
+    <div class="content">
+        <h1>Documentation</h1>
+        <p>Welcome to the official developer documentation for CYBERSPACE. Here you will find everything you need to customize your dashboard, build new widget panels, and integrate external APIs.</p>
+
+        <h2>Quick Start</h2>
+        <p>To run the CYBERSPACE development environment locally, ensure you have Node.js installed, then execute:</p>
+        <div class="code-block">
+npm install<br>
+npm run dev
+        </div>
+
+        <h2>Adding a Custom Panel</h2>
+        <p>Panels in CYBERSPACE are modular components registered via <code>src/config/panels.ts</code>. You can create a new panel by implementing the <code>PanelComponent</code> interface.</p>
+        
+        <h2>API Rate Limits</h2>
+        <p>By default, CYBERSPACE proxies requests through a local Redis cache to prevent rate-limiting against public APIs. Ensure your <code>LOCAL_API_MODE</code> is configured correctly in your <code>.env</code> file to enable graceful fallbacks.</p>
+        
+        <a href="/" class="back-link">&larr; Dashboard</a>
+    </div>
+</body>
+</html>

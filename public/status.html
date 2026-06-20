@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CYBERSPACE System Status</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #fafafa;
+            color: #333;
+            margin: 0;
+            padding: 40px;
+        }
+        .container {
+            max-width: 700px;
+            margin: 0 auto;
+        }
+        .header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin-bottom: 40px;
+        }
+        .status-hero {
+            background: #10b981;
+            color: white;
+            padding: 20px;
+            border-radius: 8px;
+            font-size: 1.2em;
+            font-weight: bold;
+            margin-bottom: 30px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        .service-list {
+            background: white;
+            border: 1px solid #eaeaea;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+        }
+        .service-item {
+            display: flex;
+            justify-content: space-between;
+            padding: 15px 20px;
+            border-bottom: 1px solid #eaeaea;
+        }
+        .service-item:last-child {
+            border-bottom: none;
+        }
+        .status-indicator {
+            color: #10b981;
+            font-weight: bold;
+            display: flex;
+            align-items: center;
+            gap: 6px;
+        }
+        .dot {
+            width: 10px;
+            height: 10px;
+            background: #10b981;
+            border-radius: 50%;
+            display: inline-block;
+        }
+        .nav-back {
+            display: inline-block;
+            margin-top: 30px;
+            color: #666;
+            text-decoration: none;
+        }
+        .nav-back:hover {
+            color: #000;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>System Status</h1>
+            <span>Updated: Just now</span>
+        </div>
+
+        <div class="status-hero">
+            <span class="dot" style="background: white;"></span> All Systems Operational
+        </div>
+
+        <div class="service-list">
+            <div class="service-item">
+                <span>API Gateway</span>
+                <span class="status-indicator"><span class="dot"></span> Operational</span>
+            </div>
+            <div class="service-item">
+                <span>Data Ingestion Pipeline (News)</span>
+                <span class="status-indicator"><span class="dot"></span> Operational</span>
+            </div>
+            <div class="service-item">
+                <span>Financial Markets Data</span>
+                <span class="status-indicator"><span class="dot"></span> Operational</span>
+            </div>
+            <div class="service-item">
+                <span>Map Tile Server (Protomaps)</span>
+                <span class="status-indicator"><span class="dot"></span> Operational</span>
+            </div>
+            <div class="service-item">
+                <span>AI Inference Engine</span>
+                <span class="status-indicator"><span class="dot"></span> Operational</span>
+            </div>
+            <div class="service-item">
+                <span>GDELT Conflict Processing</span>
+                <span class="status-indicator"><span class="dot"></span> Operational</span>
+            </div>
+        </div>
+
+        <a href="/" class="nav-back">&larr; Back to Dashboard</a>
+    </div>
+</body>
+</html>
