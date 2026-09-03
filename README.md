@@ -3,7 +3,6 @@
   <p><b>Your Personal Real-Time Global Intelligence & Situational Awareness Dashboard</b></p>
   
   [![GitHub stars](https://img.shields.io/github/stars/Drakex01/open-world?style=social)](https://github.com/Drakex01/open-world/stargazers)
-  [![License: AGPL v3](https://img.shields.io/badge/License-AGPL%20v3-blue.svg)](https://www.gnu.org/licenses/agpl-3.0)
   [![TypeScript](https://img.shields.io/badge/TypeScript-007ACC?style=flat&logo=typescript&logoColor=white)](https://www.typescriptlang.org/)
   
   <br />
@@ -75,12 +74,6 @@ Contributions are welcome! To run checks before submitting a PR:
 npm run lint             # Run linter & safe-html checks
 npm run typecheck        # Run TypeScript type safety checks
 ```
-
----
-
-## 📜 License
-
-Distributed under the **AGPL-3.0 License**. See [LICENSE](LICENSE) for details.
 
 ---
 
