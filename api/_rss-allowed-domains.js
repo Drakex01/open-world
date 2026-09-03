@@ -1,6 +1,6 @@
 // Edge-compatible ESM wrapper for shared RSS allowed domains.
 // Source of truth: shared/rss-allowed-domains.json
-// NOTE: Cannot use `import ... with { type: "json" }` — Vercel esbuild doesn't support import attributes.
+// NOTE: Cannot use import with type json
 export default [
   "feeds.bbci.co.uk",
   "www.theguardian.com",
@@ -339,5 +339,9 @@ export default [
   "www.jutarnji.hr",
   "balkaninsight.com",
   "youtube.com",
-  "www.youtube.com"
+  "www.youtube.com",
+  "chanakyaforum.com",
+  "www.livefistdefence.com",
+  "news.tuoitre.vn",
+  "www.google.com"
 ];

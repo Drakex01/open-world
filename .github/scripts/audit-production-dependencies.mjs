@@ -14,12 +14,70 @@ const SEVERITY_RANK = new Map([
 ]);
 
 export const BASELINE_ADVISORIES_BY_LOCKFILE = {
-  'package-lock.json': ['GHSA-w7jw-789q-3m8p'],
-  'consumer-prices-core/package-lock.json': ['GHSA-jx2c-rxcm-jvmq', 'GHSA-q3j6-qgpj-74h6', 'GHSA-v39h-62p7-jpjc'],
-  'blog-site/package-lock.json': [],
-  'pro-test/package-lock.json': ['GHSA-qjx8-664m-686j', 'GHSA-w24r-5266-9c3c', 'GHSA-w7jw-789q-3m8p'],
-  'scripts/package-lock.json': [],
-  'docker/runtime-package-lock.json': [],
+  "package-lock.json": [
+    "GHSA-395f-4hp3-45gv",
+    "GHSA-3jxr-9vmj-r5cp",
+    "GHSA-52cp-r559-cp3m",
+    "GHSA-5p2g-fcmc-qvqq",
+    "GHSA-5p4m-2wfm-xmqj",
+    "GHSA-73wf-gq98-2v4g",
+    "GHSA-c83g-rgw3-j3cx",
+    "GHSA-f88m-g3jw-g9cj",
+    "GHSA-mh99-v99m-4gvg",
+    "GHSA-mwp4-54f8-5fhr",
+    "GHSA-rgw5-rvv9-x895",
+    "GHSA-w3rx-r6r6-pgpr",
+    "GHSA-w7jw-789q-3m8p"
+  ],
+  "scripts/package-lock.json": [
+    "GHSA-3jxr-9vmj-r5cp",
+    "GHSA-4cwx-7wf7-3272",
+    "GHSA-hm92-r4w5-c3mj",
+    "GHSA-mh99-v99m-4gvg",
+    "GHSA-mwp4-54f8-5fhr",
+    "GHSA-rgw5-rvv9-x895",
+    "GHSA-vmh5-mc38-953g",
+    "GHSA-vxpw-j846-p89q"
+  ],
+  "consumer-prices-core/package-lock.json": [
+    "GHSA-4c8g-83qw-93j6",
+    "GHSA-52cp-r559-cp3m",
+    "GHSA-5p4m-2wfm-xmqj",
+    "GHSA-7p8r-x3mc-p8w7",
+    "GHSA-c96f-x56v-gq3h",
+    "GHSA-f65p-4m7j-42xc",
+    "GHSA-jqff-g426-hqxp",
+    "GHSA-jx2c-rxcm-jvmq",
+    "GHSA-q3j6-qgpj-74h6",
+    "GHSA-v2hh-gcrm-f6hx",
+    "GHSA-v39h-62p7-jpjc"
+  ],
+  "blog-site/package-lock.json": [
+    "GHSA-28wg-ghj8-5hjv",
+    "GHSA-2p49-hgcm-8545",
+    "GHSA-2v37-7h3g-55p8",
+    "GHSA-52cp-r559-cp3m",
+    "GHSA-5p4m-2wfm-xmqj",
+    "GHSA-f88m-g3jw-g9cj",
+    "GHSA-r28c-9q8g-f849",
+    "GHSA-vj59-8hwv-xxmv"
+  ],
+  "pro-test/package-lock.json": [
+    "GHSA-28wg-ghj8-5hjv",
+    "GHSA-2v37-7h3g-55p8",
+    "GHSA-395f-4hp3-45gv",
+    "GHSA-5p2g-fcmc-qvqq",
+    "GHSA-6g55-p6wh-862q",
+    "GHSA-73wf-gq98-2v4g",
+    "GHSA-c83g-rgw3-j3cx",
+    "GHSA-qjx8-664m-686j",
+    "GHSA-r28c-9q8g-f849",
+    "GHSA-w24r-5266-9c3c",
+    "GHSA-w3rx-r6r6-pgpr",
+    "GHSA-w7jw-789q-3m8p",
+    "GHSA-xwg4-73v4-xw9w"
+  ],
+  "docker/runtime-package-lock.json": []
 };
 
 function severityRank(severity) {

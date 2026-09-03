@@ -206,7 +206,7 @@ export class LiveWebcamsPanel extends Panel {
     this.element.insertBefore(this.toolbar, this.content);
   }
 
-  private setRegionFilter(filter: RegionFilter): void {
+  public setRegionFilter(filter: RegionFilter): void {
     if (filter === this.regionFilter) return;
     trackWebcamRegionFiltered(filter);
     this.regionFilter = filter;

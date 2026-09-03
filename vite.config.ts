@@ -626,7 +626,7 @@ const RSS_PROXY_ALLOWED_DOMAINS = new Set([
   // Feed-registry coverage (PR fix/feed-validation-unblock — kept sync with shared/rss-allowed-domains.json)
   'abcnews.go.com', 'abcnews.com', 'www.corriere.it', 'www.rt.com', 'www.alarabiya.net', 'tuoitrenews.vn',
   'www.yonhapnewstv.co.kr', 'www.chosun.com', 'rss.libsyn.com', 'feeds.megaphone.fm', 'rss.art19.com',
-  'idp.nature.com',
+  'idp.nature.com', 'chanakyaforum.com', 'www.livefistdefence.com', 'news.tuoitre.vn', 'www.google.com',
 ]);
 
 function rssProxyPlugin(): Plugin {

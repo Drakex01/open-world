@@ -1,6 +1,5 @@
 import { Panel } from './Panel';
 import { setTrustedHtml, trustedHtml } from '@/utils/dom-utils';
-import { fetchWithProxy, rssProxyUrl } from '@/utils';
 
 export class SearchNewsPanel extends Panel {
   constructor() {
@@ -70,11 +69,11 @@ export class SearchNewsPanel extends Panel {
         const items = doc.querySelectorAll('item');
 
         loadingContainer.style.display = 'none';
-        resultsContainer.innerHTML = '';
+        setTrustedHtml(resultsContainer, trustedHtml('', "clear container"));
         resultsContainer.style.display = 'flex';
 
         if (items.length === 0) {
-          resultsContainer.innerHTML = '<div style="text-align:center; padding: 20px; color: #ff7b72;">No news found for this topic.</div>';
+          setTrustedHtml(resultsContainer, trustedHtml('<div style="text-align:center; padding: 20px; color: #ff7b72;">No news found for this topic.</div>', "no news message"));
           return;
         }
 
@@ -89,20 +88,20 @@ export class SearchNewsPanel extends Panel {
           card.onmouseover = () => card.style.background = '#21262d';
           card.onmouseout = () => card.style.background = '#161b22';
           
-          card.innerHTML = `
+          setTrustedHtml(card, trustedHtml(`
             <div style="font-weight: bold; font-size: 15px; margin-bottom: 6px; line-height: 1.3; color: #58a6ff;">${title}</div>
             <div style="font-size: 12px; color: #8b949e; display: flex; justify-content: space-between;">
               <span>${source}</span>
               <span>${new Date(pubDate).toLocaleDateString()}</span>
             </div>
-          `;
+          `, "card content"));
 
           card.addEventListener('click', async () => {
             resultsContainer.style.display = 'none';
             headerRow.style.display = 'none';
             readerView.style.display = 'flex';
             externalLink.href = link;
-            readerContent.innerHTML = '<div style="text-align:center; padding: 20px;">Loading article text...</div>';
+            setTrustedHtml(readerContent, trustedHtml('<div style="text-align:center; padding: 20px;">Loading article text...</div>', "loading message"));
             
             try {
               const res = await fetch(`https://api.allorigins.win/get?url=${encodeURIComponent(link)}`);
@@ -122,12 +121,12 @@ export class SearchNewsPanel extends Panel {
               }
               
               if (!contentHtml.trim()) {
-                readerContent.innerHTML = '<div style="text-align:center; padding: 20px; color: #ff7b72;">Could not extract article text automatically. Please open in browser.</div>';
+                setTrustedHtml(readerContent, trustedHtml('<div style="text-align:center; padding: 20px; color: #ff7b72;">Could not extract article text automatically. Please open in browser.</div>', "extract failed message"));
               } else {
-                readerContent.innerHTML = `<h1 style="font-size: 20px; margin-bottom: 15px; color: #fff;">${title}</h1>` + contentHtml;
+                setTrustedHtml(readerContent, trustedHtml(`<h1 style="font-size: 20px; margin-bottom: 15px; color: #fff;">${title}</h1>` + contentHtml, "article content"));
               }
             } catch (e) {
-              readerContent.innerHTML = '<div style="text-align:center; padding: 20px; color: #ff7b72;">Failed to load article text.</div>';
+              setTrustedHtml(readerContent, trustedHtml('<div style="text-align:center; padding: 20px; color: #ff7b72;">Failed to load article text.</div>', "load error message"));
             }
           });
 
@@ -136,7 +135,7 @@ export class SearchNewsPanel extends Panel {
       } catch (err) {
         loadingContainer.style.display = 'none';
         resultsContainer.style.display = 'block';
-        resultsContainer.innerHTML = '<div style="text-align:center; padding: 20px; color: #ff7b72;">Failed to load news.</div>';
+        setTrustedHtml(resultsContainer, trustedHtml('<div style="text-align:center; padding: 20px; color: #ff7b72;">Failed to load news.</div>', "search error message"));
       }
     };
 
