@@ -318,7 +318,8 @@
     "consumerPrices": "ราคาผู้บริโภค",
     "fearGreed": "ความกลัวและความโลภ",
     "marketBreadth": "ความกว้างของตลาด",
-    "climateNews": "ข่าวสภาพอากาศ"
+    "climateNews": "ข่าวสภาพอากาศ",
+    "indiaIntel": "India Intelligence"
   },
   "commands": {
     "prefixes": {

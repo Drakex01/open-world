@@ -22,11 +22,11 @@
 
 ### 🚀 Core Features
 
-- 📡 **500+ Curated RSS & Intelligence Feeds:** Real-time news across 15 critical categories with automated AI synthesis.
-- 🌍 **Dual Interactive Map Engine:** Seamlessly toggle between a 3D Globe (Globe.gl / Three.js) and a high-performance 2D Map (Deck.gl / MapLibre) with 56+ live data layers.
+- 📡 **500+ curated news feeds:** Real-time news across 15 critical categories with automated AI synthesis.
+- 🌍 **Dual Interactive Map Engine:** Seamlessly toggle between a 3D Globe (Globe.gl / Three.js) and a high-performance 2D Map (Deck.gl / MapLibre) with 57 map layer types.
 - 📉 **Cross-Stream Signal Correlation:** Correlate military flights, vessel tracking, earthquakes, cyber threats, and macro indicators in real time.
 - 📊 **Country Instability Index (CII):** Live server-authoritative risk scoring for 31 Tier-1 nations.
-- 📈 **Finance & Commodity Radar:** Track 29 stock exchanges, bond yields, commodities, crypto, and market breadth.
+- 📈 **Finance & Commodity Radar:** Track 29 stock exchanges, bond yields, commodities, crypto, and market breadth across 24 languages.
 - 🧠 **Local AI Integration:** Built-in integration with Ollama for 100% private, zero-token-cost local LLM analysis.
 - 💻 **Native Cross-Platform Support:** Run as a modern web application or build natively with Tauri 2 (Rust).
 
@@ -62,7 +62,7 @@ Open [http://localhost:3000](http://localhost:3000) in your browser. CYBERSPACE 
 - **Geospatial & 3D:** Globe.gl, Three.js, Deck.gl, MapLibre GL
 - **Desktop Runtime:** Tauri 2 (Rust) + Node.js sidecar
 - **AI & NLP:** Ollama (Local), Groq, OpenRouter, Transformers.js
-- **Data & Protocols:** Protocol Buffers, Edge Functions, High-concurrency RSS Parsers
+- **Data & Protocols:** Protocol Buffers (276 protos, 34 services), Edge Functions, High-concurrency RSS Parsers
 
 ---
 

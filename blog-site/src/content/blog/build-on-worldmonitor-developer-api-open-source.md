@@ -223,4 +223,4 @@ Define your data structures in a proto file, implement a handler function, wire 
 
 ---
 
-**Start building at [github.com/Drakex01/cyberspace](https://github.com/Drakex01/cyberspace). 34 services, 276 proto files, and a global intelligence dataset waiting for your application.**
+**Start building at [github.com/Drakex01/open-world](https://github.com/Drakex01/open-world). 34 services, 276 proto files, and a global intelligence dataset waiting for your application.**
