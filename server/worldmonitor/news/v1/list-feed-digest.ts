@@ -384,7 +384,7 @@ interface ParseResult {
 const CACHE_TTL_HEALTHY_S = 3600;
 const CACHE_TTL_EMPTY_S = 300;
 
-function generateMockParseResult(feed: ServerFeed, variant: string, category: string): ParseResult {
+function generateMockParseResult(feed: ServerFeed, _variant: string, category: string): ParseResult {
   const items: ParsedItem[] = [];
   const now = Date.now();
   const count = 3 + Math.floor(Math.random() * 4); // 3-6 items
@@ -462,6 +462,8 @@ function generateMockParseResult(feed: ServerFeed, variant: string, category: st
       lang: feed.lang || 'en',
       description: `Detailed report covering ${title.toLowerCase()}. Experts analyze implications and expected developments over the coming quarter.`,
       isOpinion: false,
+      isFeelGood: false,
+      isEphemeralLiveCoverage: false,
     });
   }
 

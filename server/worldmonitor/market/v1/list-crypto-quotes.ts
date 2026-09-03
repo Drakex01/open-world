@@ -19,9 +19,9 @@ function toCryptoQuote(item: CoinGeckoMarketItem): CryptoQuote {
   return {
     symbol: item.symbol?.toUpperCase() || '',
     name: item.name || '',
-    display: item.symbol?.toUpperCase() || '',
     price: item.current_price || 0,
     change: item.price_change_percentage_24h || 0,
+    change7d: item.price_change_percentage_7d_in_currency || 0,
     sparkline: item.sparkline_in_7d?.price || [],
   };
 }

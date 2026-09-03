@@ -120,8 +120,11 @@ function getLocalBasesFallback(
   typeFilter: string, kindFilter: string, countryFilter: string
 ): ListMilitaryBasesResponse {
   try {
+    const cwd = typeof process !== 'undefined' && typeof (process as unknown as { cwd?: () => string }).cwd === 'function'
+      ? (process as unknown as { cwd: () => string }).cwd()
+      : '.';
     const paths = [
-      path.resolve(process.cwd(), 'scripts', 'data', 'military-bases-final.json'),
+      path.resolve(cwd, 'scripts', 'data', 'military-bases-final.json'),
       path.resolve(__dirname, '../../../../scripts/data/military-bases-final.json'),
     ];
     let filePath = '';
@@ -331,7 +334,7 @@ export async function listMilitaryBases(
 
       if (!result) {
         markNoCacheResponse(ctx.request);
-        return empty;
+        return { bases: [], clusters: [], totalInView: 0, truncated: false };
       }
       return result;
     } catch (err) {
@@ -341,6 +344,6 @@ export async function listMilitaryBases(
     }
   } catch (outerErr) {
     console.error('[list-military-bases] Unexpected error:', outerErr);
-    return empty;
+    return { bases: [], clusters: [], totalInView: 0, truncated: false };
   }
 }
